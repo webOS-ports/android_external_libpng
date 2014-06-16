@@ -59,7 +59,7 @@ include $(BUILD_HOST_STATIC_LIBRARY)
 # =====================================================
 
 include $(CLEAR_VARS)
-LOCAL_CLANG := true
+LOCAL_CLANG := false
 LOCAL_SRC_FILES := $(common_SRC_FILES)
 LOCAL_CFLAGS += $(common_CFLAGS) -ftrapv
 LOCAL_C_INCLUDES += $(common_C_INCLUDES) \
@@ -80,7 +80,7 @@ ifeq ($(ARCH_ARM_HAVE_NEON),true)
 endif
 
 include $(CLEAR_VARS)
-LOCAL_CLANG := true
+# LOCAL_CLANG := true
 LOCAL_SRC_FILES := $(common_SRC_FILES)
 LOCAL_CFLAGS += $(common_CFLAGS) -ftrapv
 LOCAL_C_INCLUDES += $(common_C_INCLUDES) \
@@ -99,7 +99,7 @@ include $(BUILD_SHARED_LIBRARY)
 # =====================================================
 
 include $(CLEAR_VARS)
-LOCAL_CLANG := true
+# LOCAL_CLANG := true
 LOCAL_C_INCLUDES:= $(common_C_INCLUDES) external/zlib
 LOCAL_SRC_FILES:= pngtest.c
 LOCAL_MODULE := pngtest
